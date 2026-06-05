@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-Step Registration Form</title>
+  <link rel="stylesheet" href="registration.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">H<span class="logo-icon">&#9646;</span></div>
+  </header>
+
+  <main>
+    <h1>Multi-Step Registration Form</h1>
+
+    <div class="progress-bar">
+      <button class="progress-step active" id="progress-1">Personal Details</button>
+      <span class="progress-divider">—</span>
+      <button class="progress-step" id="progress-2">Address Details</button>
+      <span class="progress-divider">—</span>
+      <button class="progress-step" id="progress-3">Confirmation</button>
+    </div>
+
+    <!-- Step 1: Personal Details -->
+    <div id="step-1" class="step">
+      <h2>Personal Details</h2>
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" placeholder="Enter first name" />
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" placeholder="Enter last name" />
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter email address" />
+      <label for="phone">Phone</label>
+      <input type="text" id="phone" placeholder="Enter phone number" />
+      <label for="dateOfBirth">Date of Birth</label>
+      <input type="date" id="dateOfBirth" />
+      <div class="btn-group">
+        <button id="next-1" class="btn-primary">Next</button>
+      </div>
+    </div>
+
+    <!-- Step 2: Address Details -->
+    <div id="step-2" class="step hidden">
+      <h2>Address Details</h2>
+      <label for="street">Street</label>
+      <input type="text" id="street" placeholder="Enter street address" />
+      <label for="city">City</label>
+      <input type="text" id="city" placeholder="Enter city" />
+      <label for="state">State</label>
+      <input type="text" id="state" placeholder="Enter state" />
+      <label for="zipCode">Zip Code</label>
+      <input type="text" id="zipCode" placeholder="Enter zip code" />
+      <label for="country">Country</label>
+      <input type="text" id="country" placeholder="Enter country" />
+      <div class="btn-group">
+        <button id="prev-2" class="btn-secondary">Previous</button>
+        <button id="next-2" class="btn-primary">Next</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Confirmation -->
+    <div id="step-3" class="step hidden">
+      <h2>Confirmation</h2>
+      <div class="confirm-section">
+        <h3>Personal Details</h3>
+        <p><strong>Name:</strong> <span id="confirm-name"></span></p>
+        <p><strong>Email:</strong> <span id="confirm-email"></span></p>
+        <p><strong>Phone:</strong> <span id="confirm-phone"></span></p>
+        <p><strong>Date of Birth:</strong> <span id="confirm-dob"></span></p>
+      </div>
+      <div class="confirm-section">
+        <h3>Address Details</h3>
+        <p><strong>Address:</strong> <span id="confirm-address"></span></p>
+        <p><strong>City:</strong> <span id="confirm-city"></span></p>
+        <p><strong>State:</strong> <span id="confirm-state"></span></p>
+        <p><strong>Zip:</strong> <span id="confirm-zip"></span></p>
+        <p><strong>Country:</strong> <span id="confirm-country"></span></p>
+      </div>
+      <div class="btn-group">
+        <button id="prev-3" class="btn-secondary">Previous</button>
+        <button id="submit-form" class="btn-primary">Submit</button>
+      </div>
+      <div id="submit-success" class="success-message hidden">Registration successful!</div>
+    </div>
+  </main>
+
+  <script src="registration.js"></script>
+</body>
+</html>

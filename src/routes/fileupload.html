@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>File Upload & Reader</title>
+  <link rel="stylesheet" href="fileupload.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">H<span class="logo-icon">&#9646;</span></div>
+  </header>
+
+  <main>
+    <h1>File Upload &amp; Reader Application</h1>
+
+    <section class="upload-section">
+      <h2>Upload File</h2>
+      <div class="drop-zone" id="drop-zone">
+        <p>Drag &amp; drop a file here or</p>
+        <label for="file-input" class="btn-primary">Choose File</label>
+        <input type="file" id="file-input" hidden />
+      </div>
+      <div id="file-info" class="file-info hidden">
+        <span id="file-name"></span>
+        <span id="file-size"></span>
+      </div>
+    </section>
+
+    <section class="content-section hidden" id="content-section">
+      <h2>File Content</h2>
+      <pre id="file-content"></pre>
+    </section>
+
+    <section class="actions-section" id="actions-section" style="display:none">
+      <button id="publish-btn" class="btn-publish">Publish File</button>
+      <div id="publish-success" class="success-message hidden">File published successfully!</div>
+    </section>
+  </main>
+
+  <script src="fileupload.js"></script>
+</body>
+</html>
