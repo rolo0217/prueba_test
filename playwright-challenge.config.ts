@@ -1,11 +1,8 @@
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
-  testDir: './test',
-  // Challenge specs (not implemented stubs)
-  // testDir: './playwright-tests',
+  testDir: './playwright-tests',
   fullyParallel: false,
-  forbidOnly: !!process.env.CI,
   retries: 0,
   workers: 1,
   timeout: 120000,
