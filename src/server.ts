@@ -6,6 +6,11 @@ const app = express();
 const PORT = 8000;
 
 app.use(express.json());
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../src/routes/home.html'));
+});
+
 app.use(express.static(path.join(__dirname, '../src/routes')));
 
 app.use('/api', contactsRouter);
