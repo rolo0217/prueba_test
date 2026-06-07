@@ -6,6 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
+    "start:js": "node server.js",
     "dev": "ts-node src/server.ts",
     "test": "playwright test"
   },
