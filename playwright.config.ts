@@ -6,6 +6,7 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: 0,
   workers: 1,
+  timeout: 120000,
   reporter: 'html',
   use: {
     baseURL: 'http://localhost:8000',
@@ -14,7 +15,7 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { ...devices['Desktop Chrome'], launchOptions: { slowMo: 500 } },
     },
   ],
 });

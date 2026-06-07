@@ -13,6 +13,12 @@ let contacts: Contact[] = [
 ];
 let nextId = 2;
 
+router.post('/contacts/reset', (req: Request, res: Response) => {
+  contacts = [{ id: 1, name: 'Demo', phone: '1234567890' }];
+  nextId = 2;
+  res.json({ message: 'Contacts reset' });
+});
+
 router.get('/contacts', (req: Request, res: Response) => {
   res.json(contacts);
 });

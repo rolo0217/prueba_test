@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe.serial('Contact Manager', () => {
   test.beforeEach(async ({ page }) => {
-    // Visit the application before each test
+    await page.request.post('http://localhost:8000/api/contacts/reset');
     await page.goto('http://localhost:8000');
   });
 
